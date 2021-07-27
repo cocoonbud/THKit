@@ -14,6 +14,7 @@
 		791218B326AF115500ACF934 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 791218B226AF115500ACF934 /* main.m */; };
 		791218BC26AF136400ACF934 /* UIImage+color.m in Sources */ = {isa = PBXBuildFile; fileRef = 791218BB26AF136400ACF934 /* UIImage+color.m */; };
 		791218BF26AF142A00ACF934 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 791218BE26AF142A00ACF934 /* UIColor+Hex.m */; };
+		791218C226AFBAA100ACF934 /* TMBgImgGeneratorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 791218C126AFBAA100ACF934 /* TMBgImgGeneratorVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		791218BB26AF136400ACF934 /* UIImage+color.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+color.m"; sourceTree = "<group>"; };
 		791218BD26AF142A00ACF934 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		791218BE26AF142A00ACF934 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		791218C026AFBAA100ACF934 /* TMBgImgGeneratorVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMBgImgGeneratorVC.h; sourceTree = "<group>"; };
+		791218C126AFBAA100ACF934 /* TMBgImgGeneratorVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMBgImgGeneratorVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,8 @@
 				791218AE26AF115500ACF934 /* LaunchScreen.storyboard */,
 				791218B126AF115500ACF934 /* Info.plist */,
 				791218B226AF115500ACF934 /* main.m */,
+				791218C026AFBAA100ACF934 /* TMBgImgGeneratorVC.h */,
+				791218C126AFBAA100ACF934 /* TMBgImgGeneratorVC.m */,
 			);
 			path = THKit;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				791218C226AFBAA100ACF934 /* TMBgImgGeneratorVC.m in Sources */,
 				791218A826AF115400ACF934 /* ViewController.m in Sources */,
 				791218BF26AF142A00ACF934 /* UIColor+Hex.m in Sources */,
 				791218BC26AF136400ACF934 /* UIImage+color.m in Sources */,

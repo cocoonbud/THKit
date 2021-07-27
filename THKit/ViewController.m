@@ -6,10 +6,12 @@
 //
 
 #import "ViewController.h"
-#import "UIImage+Color.h"
-#import "UIColor+Hex.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
+
+@property(nonatomic, strong) UITableView *tableView;
+
+@property(nonatomic, strong) NSArray *dataArr;
 
 @end
 
@@ -17,23 +19,64 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-    btn.center = self.view.center;
-    
-    NSArray *gradientColorArr = @[[UIColor colorWithHex:@"#FFFFFF"], [UIColor colorWithHex:@"#FFCFD7"]];
-    
-    NSArray *borderColorArr = @[[UIColor colorWithHex:@"#FFC0CA"], [UIColor colorWithHex:@"#FF96A6"]];
-    
-    CGFloat locations1[] = {0.0, 1.0};
-    
-    UIImage *bgImg = [UIImage creatBgImgWithBgWidth:100 height:100 shadowColor:[[UIColor yellowColor] colorWithAlphaComponent:0.2] shadowWidth:1 shadowColorOffset:CGSizeMake(4, 4) shadowBlur:6 cornerRadio:6 gradientColors:gradientColorArr gradientLocations:locations1 gradientBorderColors:borderColorArr gradientBorderColorsLocations:locations1];
-    
-    [btn setTitle:@"Gradint" forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
-    btn.titleLabel.font = [UIFont systemFontOfSize:30];
-    [btn setBackgroundImage:bgImg forState:UIControlStateNormal];
-    [self.view addSubview:btn];
+    self.title = @"THKit demo";
+    [self.view addSubview:self.tableView];
+    self.tableView.frame = self.view.frame;
 }
 
+#pragma mark - UITableViewDelegate, UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArr.count;
+}
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellId = @"cellId";
+    
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+    }
+    
+    NSDictionary *dict = self.dataArr[indexPath.row];
+    
+    cell.textLabel.text = dict.allKeys[0];
+    
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 60;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    NSDictionary *dict = self.dataArr[indexPath.row];
+    
+    NSString *key = dict.allKeys[0];
+    
+    Class class = NSClassFromString([dict objectForKey:key]);
+    id obj = [[class alloc] init];
+    [self.navigationController pushViewController:obj animated:YES];
+}
+
+#pragma mark - Getter
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        _tableView.dataSource = self;
+        _tableView.delegate = self;
+        _tableView.backgroundColor = [UIColor whiteColor];
+        _tableView.showsVerticalScrollIndicator = false;
+    }
+    return _tableView;
+}
+
+- (NSArray *)dataArr {
+    if (!_dataArr) {
+        _dataArr = @[@{@"通过颜色生成带有渐变边框、渐变图、圆角、阴影的图片":@"TMBgImgGeneratorVC"}];
+    }
+    return _dataArr;
+}
 @end
