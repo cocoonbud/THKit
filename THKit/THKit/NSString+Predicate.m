@@ -50,7 +50,7 @@
 }
 
 - (BOOL)isValidBankCardNumber {
-    NSString *str = @"^(\\d{16}|\\d{19})$";
+    NSString *str = @"^([1-9]{1})(\\d{14}|\\d{18})$";
     
     NSPredicate *p = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", str];
     
@@ -73,8 +73,8 @@
     return [p evaluateWithObject:self];
 }
 
-- (BOOL)isValidAlphaNumberPassword {
-    NSString *str = @"^(?!\\d+$|[a-zA-Z]+$)\\w{6,12}$";
+- (BOOL)isValidLetterAndNumberPassword {
+    NSString *str = @"^[A-Za-z0-9]+$";
     
     NSPredicate *p = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", str];
     
