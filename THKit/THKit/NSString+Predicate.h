@@ -11,33 +11,32 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (Predicate)
 
-/// 有效的电话号码
+/// 检测是否有效的电话号码
 - (BOOL)isValidMobileNumber;
 
-/// 有效的真实姓名
+/// 检测是否有效的真实姓名
 - (BOOL)isValidRealName;
 
-/// 是否是纯中文
+/// 检测是否是纯中文
 - (BOOL)isPureChinese;
 
-/// 有效的验证码(根据自家的验证码位数进行修改)
+/// 检测是否纯数字
+- (BOOL)isPureNumber;
+
+/// 检测是否有效的验证码(根据自家的验证码位数进行修改)
 - (BOOL)isValidVerifyCode;
 
-/// 有效的银行卡号
+/// 检测是否有效的银行卡号
 - (BOOL)isValidBankCardNumber;
 
-/// 有效的邮箱
+/// 检测是否有效的邮箱
 - (BOOL)isValidEmail;
 
-/// 有效的字母数字密码
+/// 检测是否有效的字母数字密码
 - (BOOL)isValidAlphaNumberPassword;
 
-/// 检测有效身份证
-/// @param num 身份证位数
-- (BOOL)isValidIDWithNum:(NSInteger)num;
-
-/// 限制只能输入数字
-- (BOOL)isOnlyNumber;
+/// 检测是否有效身份证
+- (BOOL)isValidIDNum;
 
 @end
 
