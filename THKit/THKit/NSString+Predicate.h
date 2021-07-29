@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 检测是否有效的电话号码
 - (BOOL)isValidMobileNumber;
 
+/// 检测是否有效的验证码
+- (BOOL)isValidVerifyCode;
+
 /// 检测是否有效的真实姓名
 - (BOOL)isValidRealName;
 
@@ -22,9 +25,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 检测是否纯数字
 - (BOOL)isPureNumber;
-
-/// 检测是否有效的验证码(根据自家的验证码位数进行修改)
-- (BOOL)isValidVerifyCode;
 
 /// 检测是否有效的银行卡号
 - (BOOL)isValidBankCardNumber;

@@ -18,7 +18,7 @@
 }
 
 - (BOOL)isValidVerifyCode {
-    NSString *str = @"^[0-9]{4}";
+    NSString *str = @"^[1-9]\\d{3}$";
     
     NSPredicate *p = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", str];
     
