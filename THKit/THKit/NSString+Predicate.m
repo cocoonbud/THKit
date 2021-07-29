@@ -10,7 +10,7 @@
 @implementation NSString (Predicate)
 
 - (BOOL)isValidMobileNumber {
-    NSString *const str = @"^1(3|4|5|7|8)\\d{9}$";
+    NSString *str = @"^(13[0-9]|14[5|7]|15[0|1|2|3|4|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\\d{8}$";
     
     NSPredicate *p = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", str];
     
@@ -42,7 +42,7 @@
 }
 
 - (BOOL)isPureNumber {
-    NSString *const str = @"^[0-9]*$";
+    NSString *str = @"^[0-9]*$";
     
     NSPredicate *p = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", str];
     
@@ -50,7 +50,7 @@
 }
 
 - (BOOL)isValidBankCardNumber {
-    NSString *const str = @"^(\\d{16}|\\d{19})$";
+    NSString *str = @"^(\\d{16}|\\d{19})$";
     
     NSPredicate *p = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", str];
     
