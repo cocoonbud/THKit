@@ -9,33 +9,71 @@
 
 @implementation NSString (URLEncode)
 
-- (NSString *)URLEncode {
-    return [self urlEncodeUsingEncoding:NSUTF8StringEncoding];
+- (NSString *)URLDecode {
+    NSString *replaceStr = [self stringByReplacingOccurrencesOfString:@"+" withString:@" "];
+    
+    return [replaceStr stringByRemovingPercentEncoding];
 }
 
-- (NSString *)urlEncodeUsingEncoding:(NSStringEncoding)encoding {
+// Replace one by one
+- (NSString *)URLEncode {
+    NSMutableString *resStrM = [NSMutableString string];
+    
+    const unsigned char *source = (const unsigned char *)[self UTF8String];
+    
+    unsigned long sourceLen = strlen((const char *)source);
+    
+    for (int i = 0; i < sourceLen; ++i) {
+        const unsigned char cur = source[i];
+        if (cur == ' '){
+            [resStrM appendString:@"+"];
+        } else if (cur == '.' ||
+                   cur == '-' ||
+                   cur == '_' ||
+                   cur == '~' ||
+                   (cur >= 'a' && cur <= 'z') ||
+                   (cur >= 'A' && cur <= 'Z') ||
+                   (cur >= '0' && cur <= '9')) {
+            [resStrM appendFormat:@"%c", cur];
+        } else {
+            [resStrM appendFormat:@"%%%02X", cur];
+        }
+    }
+    return [resStrM copy];
+}
+
+- (NSString *)URLEncode:(NSStringEncoding)encoding {
     return (__bridge_transfer NSString *)CFURLCreateStringByAddingPercentEscapes(NULL, (__bridge CFStringRef)self, NULL, (CFStringRef)@"!*'\"();:@&=+$,/?%#[]% ", CFStringConvertNSStringEncodingToEncoding(encoding));
 }
 
-- (NSString *)urlDecode {
-    return [self urlDecodeUsingEncoding:NSUTF8StringEncoding];
-}
-
-- (NSString *)urlDecodeUsingEncoding:(NSStringEncoding)encoding {
+- (NSString *)URLDecode:(NSStringEncoding)encoding {
     return (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL, (__bridge CFStringRef)self, CFSTR(""), CFStringConvertNSStringEncodingToEncoding(encoding));
 }
 
-- (NSDictionary *)dictionaryFromURLParameters{
-    NSArray *pairs = [self componentsSeparatedByString:@"&"];
++ (NSDictionary *)fetchDictFromQuery:(NSString *)query {
+    if (query.length < 1) { return nil; }
     
-    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *result = [NSMutableDictionary dictionary];
     
-    for (NSString *pair in pairs) {
-        NSArray *kv = [pair componentsSeparatedByString:@"="];
-        NSString *val = [[kv objectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        [params setObject:val forKey:[kv objectAtIndex:0]];
+    NSArray *params = [query componentsSeparatedByString:@"&"];
+    
+    if (![params count]) { return nil; }
+    
+    for (NSString *param in params) {
+        NSRange range = [param rangeOfString:@"="];
+        
+        if (range.location != NSNotFound) {
+            NSString *key = [param substringToIndex:range.location];
+            
+            NSString *value = [param substringFromIndex:range.location + 1];
+            
+            if (key && value) {
+                [result setValue:value forKey:key];
+            }
+        }
     }
-    return params;
+    
+    return result;
 }
 
 @end
