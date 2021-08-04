@@ -15,6 +15,14 @@
 		791218BC26AF136400ACF934 /* UIImage+color.m in Sources */ = {isa = PBXBuildFile; fileRef = 791218BB26AF136400ACF934 /* UIImage+color.m */; };
 		791218BF26AF142A00ACF934 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 791218BE26AF142A00ACF934 /* UIColor+Hex.m */; };
 		791218C226AFBAA100ACF934 /* TMBgImgGeneratorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 791218C126AFBAA100ACF934 /* TMBgImgGeneratorVC.m */; };
+		795686F726BAEF4D00889B45 /* NSDecimalNumber+Calculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 795686F626BAEF4D00889B45 /* NSDecimalNumber+Calculate.m */; };
+		7998D10926B45FD300FE1886 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 7998D10826B45FD300FE1886 /* ViewController2.m */; };
+		799DC1AB26B70AB200AEEB42 /* shoe_moreInfo_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 799DC1A926B70AB200AEEB42 /* shoe_moreInfo_icon@2x.png */; };
+		799DC1AC26B70AB200AEEB42 /* shoe_moreInfo_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 799DC1AA26B70AB200AEEB42 /* shoe_moreInfo_icon@3x.png */; };
+		799DC1AF26B7135B00AEEB42 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 799DC1AE26B7135B00AEEB42 /* UIViewController+BackButtonHandler.m */; };
+		79A8448626B9331B00D6C46F /* NSObject+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A8448526B9331B00D6C46F /* NSObject+Swizzling.m */; };
+		79C90BAB26B5AA63006A1344 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C90BAA26B5AA63006A1344 /* NSString+URLEncode.m */; };
+		79C90BB126B6A7FC006A1344 /* NSString+QRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C90BB026B6A7FC006A1344 /* NSString+QRCode.m */; };
 		79CAC19926B1B34900A0EE71 /* NSString+Predicate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CAC19826B1B34900A0EE71 /* NSString+Predicate.m */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +42,20 @@
 		791218BE26AF142A00ACF934 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		791218C026AFBAA100ACF934 /* TMBgImgGeneratorVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMBgImgGeneratorVC.h; sourceTree = "<group>"; };
 		791218C126AFBAA100ACF934 /* TMBgImgGeneratorVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMBgImgGeneratorVC.m; sourceTree = "<group>"; };
+		795686F526BAEF4D00889B45 /* NSDecimalNumber+Calculate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+Calculate.h"; sourceTree = "<group>"; };
+		795686F626BAEF4D00889B45 /* NSDecimalNumber+Calculate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+Calculate.m"; sourceTree = "<group>"; };
+		7998D10726B45FD300FE1886 /* ViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		7998D10826B45FD300FE1886 /* ViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		799DC1A926B70AB200AEEB42 /* shoe_moreInfo_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shoe_moreInfo_icon@2x.png"; sourceTree = "<group>"; };
+		799DC1AA26B70AB200AEEB42 /* shoe_moreInfo_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shoe_moreInfo_icon@3x.png"; sourceTree = "<group>"; };
+		799DC1AD26B7135B00AEEB42 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
+		799DC1AE26B7135B00AEEB42 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
+		79A8448426B9331B00D6C46F /* NSObject+Swizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzling.h"; sourceTree = "<group>"; };
+		79A8448526B9331B00D6C46F /* NSObject+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzling.m"; sourceTree = "<group>"; };
+		79C90BA926B5AA63006A1344 /* NSString+URLEncode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncode.h"; sourceTree = "<group>"; };
+		79C90BAA26B5AA63006A1344 /* NSString+URLEncode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncode.m"; sourceTree = "<group>"; };
+		79C90BAF26B6A7FC006A1344 /* NSString+QRCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+QRCode.h"; sourceTree = "<group>"; };
+		79C90BB026B6A7FC006A1344 /* NSString+QRCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+QRCode.m"; sourceTree = "<group>"; };
 		79CAC19726B1B34900A0EE71 /* NSString+Predicate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Predicate.h"; sourceTree = "<group>"; };
 		79CAC19826B1B34900A0EE71 /* NSString+Predicate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Predicate.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,6 +74,8 @@
 		7912189426AF115400ACF934 = {
 			isa = PBXGroup;
 			children = (
+				7998D10726B45FD300FE1886 /* ViewController2.h */,
+				7998D10826B45FD300FE1886 /* ViewController2.m */,
 				7912189F26AF115400ACF934 /* THKit */,
 				7912189E26AF115400ACF934 /* Products */,
 			);
@@ -71,6 +95,8 @@
 				791218B926AF134900ACF934 /* THKit */,
 				791218A026AF115400ACF934 /* AppDelegate.h */,
 				791218A126AF115400ACF934 /* AppDelegate.m */,
+				799DC1A926B70AB200AEEB42 /* shoe_moreInfo_icon@2x.png */,
+				799DC1AA26B70AB200AEEB42 /* shoe_moreInfo_icon@3x.png */,
 				791218A626AF115400ACF934 /* ViewController.h */,
 				791218A726AF115400ACF934 /* ViewController.m */,
 				791218AC26AF115500ACF934 /* Assets.xcassets */,
@@ -92,6 +118,16 @@
 				791218BB26AF136400ACF934 /* UIImage+color.m */,
 				79CAC19726B1B34900A0EE71 /* NSString+Predicate.h */,
 				79CAC19826B1B34900A0EE71 /* NSString+Predicate.m */,
+				79C90BA926B5AA63006A1344 /* NSString+URLEncode.h */,
+				79C90BAA26B5AA63006A1344 /* NSString+URLEncode.m */,
+				79C90BAF26B6A7FC006A1344 /* NSString+QRCode.h */,
+				79C90BB026B6A7FC006A1344 /* NSString+QRCode.m */,
+				799DC1AD26B7135B00AEEB42 /* UIViewController+BackButtonHandler.h */,
+				799DC1AE26B7135B00AEEB42 /* UIViewController+BackButtonHandler.m */,
+				79A8448426B9331B00D6C46F /* NSObject+Swizzling.h */,
+				79A8448526B9331B00D6C46F /* NSObject+Swizzling.m */,
+				795686F526BAEF4D00889B45 /* NSDecimalNumber+Calculate.h */,
+				795686F626BAEF4D00889B45 /* NSDecimalNumber+Calculate.m */,
 			);
 			path = THKit;
 			sourceTree = "<group>";
@@ -153,8 +189,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				799DC1AC26B70AB200AEEB42 /* shoe_moreInfo_icon@3x.png in Resources */,
 				791218B026AF115500ACF934 /* LaunchScreen.storyboard in Resources */,
 				791218AD26AF115500ACF934 /* Assets.xcassets in Resources */,
+				799DC1AB26B70AB200AEEB42 /* shoe_moreInfo_icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,10 +206,16 @@
 				791218C226AFBAA100ACF934 /* TMBgImgGeneratorVC.m in Sources */,
 				791218A826AF115400ACF934 /* ViewController.m in Sources */,
 				791218BF26AF142A00ACF934 /* UIColor+Hex.m in Sources */,
+				795686F726BAEF4D00889B45 /* NSDecimalNumber+Calculate.m in Sources */,
+				79C90BAB26B5AA63006A1344 /* NSString+URLEncode.m in Sources */,
 				791218BC26AF136400ACF934 /* UIImage+color.m in Sources */,
 				79CAC19926B1B34900A0EE71 /* NSString+Predicate.m in Sources */,
+				7998D10926B45FD300FE1886 /* ViewController2.m in Sources */,
+				79C90BB126B6A7FC006A1344 /* NSString+QRCode.m in Sources */,
 				791218A226AF115400ACF934 /* AppDelegate.m in Sources */,
+				799DC1AF26B7135B00AEEB42 /* UIViewController+BackButtonHandler.m in Sources */,
 				791218B326AF115500ACF934 /* main.m in Sources */,
+				79A8448626B9331B00D6C46F /* NSObject+Swizzling.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
