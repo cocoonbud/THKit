@@ -9,75 +9,63 @@
 
 @implementation NSDecimalNumber (Calculate)
 
-+ (NSDecimalNumber *)decimalNumber:(id)strOrNum roundingMode:(NSRoundingMode)mode scale:(int)scale {
-    if (!strOrNum) return nil;
-    NSDecimalNumber *one;
-
++ (NSDecimalNumber *)decimalNumber:(id)obj1 roundingMode:(NSRoundingMode)mode scale:(int)scale {
+    if (!obj1) return nil;
     
+    NSDecimalNumber *num1 = [NSDecimalNumber creatDecimalNumWith:obj1];
+
     NSDecimalNumberHandler *handler = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:mode scale:scale raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:NO];
-    return  [one decimalNumberByRoundingAccordingToBehavior:handler];
+    return  [num1 decimalNumberByRoundingAccordingToBehavior:handler];
 }
 
-+ (NSDecimalNumber *)decimalNumber:(id)obj1 with:(id)obj2 type:(THCalType)type completeHandler:(NSDecimalNumberHandler *)handler {
++ (NSDecimalNumber *)decimalNumber:(id)obj1 with:(id)obj2 type:(THCalType)type completeHandler:(NSDecimalNumberHandler * __nullable)handler {
     if (!obj2 || !obj1) return nil;
-    NSDecimalNumber *one = [NSDecimalNumber creatDecimalNumWith:obj1];
     
-    NSDecimalNumber *another = [NSDecimalNumber creatDecimalNumWith:obj2];
+    NSDecimalNumber *num1 = [NSDecimalNumber creatDecimalNumWith:obj1];
     
-    NSDecimalNumber *returnNum;
+    NSDecimalNumber *num2 = [NSDecimalNumber creatDecimalNumWith:obj2];
     
-    if (type == THCalAdd) {
-        returnNum = [one decimalNumberByAdding:another];
-    }else if (type == THCalSubtract){
-        returnNum  = [one decimalNumberBySubtracting:another];
-    }else if (type == THCalMultiply){
-        returnNum = [one decimalNumberByMultiplyingBy:another];
-    }else if (type == THCalDivide){
-        if ([NSDecimalNumber compare:another with:@(0)] == 0) {
-            returnNum = nil;
-        }else {
-            returnNum = [one decimalNumberByDividingBy:another];
+    NSDecimalNumber *returnNum = nil;
+    
+    switch (type) {
+        case THCalAdd: {
+            returnNum = [num1 decimalNumberByAdding:num2];
         }
-    }else{
-        returnNum = nil;
+            break;
+        case THCalSubtract: {
+            returnNum  = [num1 decimalNumberBySubtracting:num2];
+        }
+            break;
+        case THCalMultiply: {
+            returnNum = [num1 decimalNumberByMultiplyingBy:num2];
+        }
+            break;
+        case THCalDivide: {
+            if ([NSDecimalNumber compare:num2 with:@(0)] != NSOrderedSame) {
+                returnNum = [num1 decimalNumberByDividingBy:num2];
+            }
+        }
+            break;
     }
+
     if (returnNum) {
         if (handler) {
             return [returnNum decimalNumberByRoundingAccordingToBehavior:handler];
-        }else{
-            return returnNum;
         }
-    }else{
-        return nil;
     }
+    return returnNum;
 }
 
 + (NSComparisonResult)compare:(id)obj1 with:(id)obj2 {
-    if (!obj2 || !obj1) return -404;
+    if (!obj2 || !obj1) return -101;
     
-    NSDecimalNumber *one;
-    NSDecimalNumber *another;
+    NSDecimalNumber *num1 = [NSDecimalNumber creatDecimalNumWith:obj1];
     
-    if ([obj1 isKindOfClass:[NSString class]]) {
-        one = [NSDecimalNumber decimalNumberWithString:obj1];
-    }else if([obj1 isKindOfClass:[NSDecimalNumber class]]){
-        one = obj1;
-    }else if ([obj1 isKindOfClass:[NSNumber class]]){
-        one = [NSDecimalNumber decimalNumberWithDecimal:[obj1 decimalValue]];
-    }else{
-        return -404;
-    }
+    NSDecimalNumber *num2 = [NSDecimalNumber creatDecimalNumWith:obj2];
     
-    if ([obj2 isKindOfClass:[NSString class]]) {
-        another = [NSDecimalNumber decimalNumberWithString:obj2];
-    }else if([obj2 isKindOfClass:[NSDecimalNumber class]]){
-        another = obj2;
-    }else if ([obj2 isKindOfClass:[NSNumber class]]){
-        another = [NSDecimalNumber decimalNumberWithDecimal:[obj2 decimalValue]];
-    }else{
-        return -404;
-    }
-    return [one compare:another];
+    if (!num1 || !num2) return -101;
+   
+    return [num1 compare:num2];
 }
 
 + (NSDecimalNumber *)add:(id)obj1 with:(id)obj2 {
@@ -98,25 +86,22 @@
 
 + (NSDecimalNumber *)min:(id)obj1 with:(id)obj2 {
     if (!obj2 || !obj1) return nil;
-    NSDecimalNumber *one = [NSDecimalNumber creatDecimalNumWith:obj1];
-    NSDecimalNumber *another = [NSDecimalNumber creatDecimalNumWith:obj2];
     
-    if ([one compare:another] == NSOrderedAscending) {
-        return one;
-    }else {
-        return another;
-    }
+    NSDecimalNumber *num1 = [NSDecimalNumber creatDecimalNumWith:obj1];
+    
+    NSDecimalNumber *num2 = [NSDecimalNumber creatDecimalNumWith:obj2];
+    
+    return ([num1 compare:num2] == NSOrderedAscending) ? num1 : num2;
 }
 
 + (NSDecimalNumber *)max:(id)obj1 with:(id)obj2 {
-    NSDecimalNumber *one = [NSDecimalNumber creatDecimalNumWith:obj1];
-    NSDecimalNumber *another = [NSDecimalNumber creatDecimalNumWith:obj2];
+    if (!obj2 || !obj1) return nil;
     
-    if ([one compare:another] == NSOrderedAscending) {
-        return another;
-    }else {
-        return one;
-    }
+    NSDecimalNumber *num1 = [NSDecimalNumber creatDecimalNumWith:obj1];
+    
+    NSDecimalNumber *num2 = [NSDecimalNumber creatDecimalNumWith:obj2];
+    
+    return ([num1 compare:num2] == NSOrderedAscending) ? num2 : num1;
 }
 
 #pragma mark - private

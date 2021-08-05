@@ -20,7 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSComparisonResult)compare:(id)obj1 with:(id)obj2;
 
-+ (NSDecimalNumber *)decimalNumber:(id)obj1 with:(id)obj2 type:(THCalType)type completeHandler:(NSDecimalNumberHandler *)handler;
++ (NSDecimalNumber *)decimalNumber:(id)obj1 roundingMode:(NSRoundingMode)mode scale:(int)scale;
+
++ (NSDecimalNumber *)decimalNumber:(id)obj1 with:(id)obj2 type:(THCalType)type completeHandler:(NSDecimalNumberHandler *__nullable)handler;
 
 + (NSDecimalNumber *)add:(id)obj1 with:(id)obj2;
 
