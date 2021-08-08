@@ -9,7 +9,7 @@
 
 @implementation NSArray (SafeAccess)
 
-- (id)objectWithIndex:(NSUInteger)index{
+- (id)objectWithIndex:(NSUInteger)index {
     if (index <self.count) {
         return self[index];
     }
@@ -18,6 +18,7 @@
 
 - (NSString*)stringWithIndex:(NSUInteger)index {
     id value = [self objectWithIndex:index];
+    
     if (value == nil || value == [NSNull null])
     {
         return @"";
@@ -32,8 +33,9 @@
     return nil;
 }
 
-- (NSNumber*)numberWithIndex:(NSUInteger)index{
+- (NSNumber*)numberWithIndex:(NSUInteger)index {
     id value = [self objectWithIndex:index];
+    
     if ([value isKindOfClass:[NSNumber class]]) {
         return (NSNumber*)value;
     }
@@ -45,8 +47,9 @@
     return nil;
 }
 
-- (NSArray*)arrayWithIndex:(NSUInteger)index{
+- (NSArray*)arrayWithIndex:(NSUInteger)index {
     id value = [self objectWithIndex:index];
+    
     if (value == nil || value == [NSNull null]){
         return nil;
     }
@@ -56,8 +59,9 @@
     return nil;
 }
 
-- (NSDictionary*)dictionaryWithIndex:(NSUInteger)index{
+- (NSDictionary*)dictionaryWithIndex:(NSUInteger)index {
     id value = [self objectWithIndex:index];
+    
     if (value == nil || value == [NSNull null]){
         return nil;
     }
@@ -67,8 +71,9 @@
     return nil;
 }
 
-- (NSInteger)integerWithIndex:(NSUInteger)index{
+- (NSInteger)integerWithIndex:(NSUInteger)index {
     id value = [self objectWithIndex:index];
+    
     if (value == nil || value == [NSNull null]){
         return 0;
     }
@@ -80,6 +85,7 @@
 
 - (NSUInteger)unsignedIntegerWithIndex:(NSUInteger)index {
     id value = [self objectWithIndex:index];
+    
     if (value == nil || value == [NSNull null]){
         return 0;
     }
@@ -91,6 +97,7 @@
 
 - (BOOL)boolWithIndex:(NSUInteger)index {
     id value = [self objectWithIndex:index];
+    
     if (value == nil || value == [NSNull null]){
         return NO;
     }
@@ -105,6 +112,7 @@
 
 - (int16_t)int16WithIndex:(NSUInteger)index {
     id value = [self objectWithIndex:index];
+    
     if (value == nil || value == [NSNull null])
     {
         return 0;
@@ -120,8 +128,9 @@
     return 0;
 }
 
-- (int32_t)int32WithIndex:(NSUInteger)index{
+- (int32_t)int32WithIndex:(NSUInteger)index {
     id value = [self objectWithIndex:index];
+    
     if (value == nil || value == [NSNull null]){
         return 0;
     }
@@ -131,7 +140,7 @@
     return 0;
 }
 
-- (int64_t)int64WithIndex:(NSUInteger)index{
+- (int64_t)int64WithIndex:(NSUInteger)index {
     id value = [self objectWithIndex:index];
     
     if (value == nil || value == [NSNull null]){
@@ -143,8 +152,9 @@
     return 0;
 }
 
-- (char)charWithIndex:(NSUInteger)index{
+- (char)charWithIndex:(NSUInteger)index {
     id value = [self objectWithIndex:index];
+    
     if (value == nil || value == [NSNull null]){
         return 0;
     }
@@ -154,8 +164,9 @@
     return 0;
 }
 
-- (short)shortWithIndex:(NSUInteger)index{
+- (short)shortWithIndex:(NSUInteger)index {
     id value = [self objectWithIndex:index];
+    
     if (value == nil || value == [NSNull null]){
         return 0;
     }
@@ -167,7 +178,8 @@
     }
     return 0;
 }
-- (float)floatWithIndex:(NSUInteger)index{
+
+- (float)floatWithIndex:(NSUInteger)index {
     id value = [self objectWithIndex:index];
     if (value == nil || value == [NSNull null]){
         return 0;
@@ -177,8 +189,10 @@
     }
     return 0;
 }
-- (double)doubleWithIndex:(NSUInteger)index{
+
+- (double)doubleWithIndex:(NSUInteger)index {
     id value = [self objectWithIndex:index];
+    
     if (value == nil || value == [NSNull null]){
         return 0;
     }
