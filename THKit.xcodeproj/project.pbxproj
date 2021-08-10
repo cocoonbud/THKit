@@ -15,9 +15,14 @@
 		791218BC26AF136400ACF934 /* UIImage+color.m in Sources */ = {isa = PBXBuildFile; fileRef = 791218BB26AF136400ACF934 /* UIImage+color.m */; };
 		791218BF26AF142A00ACF934 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 791218BE26AF142A00ACF934 /* UIColor+Hex.m */; };
 		791218C226AFBAA100ACF934 /* TMBgImgGeneratorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 791218C126AFBAA100ACF934 /* TMBgImgGeneratorVC.m */; };
+		7922CF0326C275FF00F9902E /* NSObject+THAutoDestructNoti.m in Sources */ = {isa = PBXBuildFile; fileRef = 7922CF0226C275FF00F9902E /* NSObject+THAutoDestructNoti.m */; };
 		795686F726BAEF4D00889B45 /* NSDecimalNumber+Calculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 795686F626BAEF4D00889B45 /* NSDecimalNumber+Calculate.m */; };
+		799B1E5E26C186F700D34256 /* NSException+THTrackLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 799B1E5D26C186F700D34256 /* NSException+THTrackLog.m */; };
 		799DC1AF26B7135B00AEEB42 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 799DC1AE26B7135B00AEEB42 /* UIViewController+BackButtonHandler.m */; };
 		79A8448626B9331B00D6C46F /* NSObject+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A8448526B9331B00D6C46F /* NSObject+Swizzling.m */; };
+		79BCD71926BD930500CCF4DB /* UIDevice+DiskInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD71826BD930500CCF4DB /* UIDevice+DiskInfo.m */; };
+		79BCD71C26BEE47D00CCF4DB /* NSArray+SafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD71B26BEE47D00CCF4DB /* NSArray+SafeAccess.m */; };
+		79BCD71F26C03C4C00CCF4DB /* NSString+THEmoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 79BCD71E26C03C4C00CCF4DB /* NSString+THEmoji.m */; };
 		79C90BAB26B5AA63006A1344 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C90BAA26B5AA63006A1344 /* NSString+URLEncode.m */; };
 		79C90BB126B6A7FC006A1344 /* NSString+QRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C90BB026B6A7FC006A1344 /* NSString+QRCode.m */; };
 		79CAC19926B1B34900A0EE71 /* NSString+Predicate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CAC19826B1B34900A0EE71 /* NSString+Predicate.m */; };
@@ -39,12 +44,22 @@
 		791218BE26AF142A00ACF934 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		791218C026AFBAA100ACF934 /* TMBgImgGeneratorVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMBgImgGeneratorVC.h; sourceTree = "<group>"; };
 		791218C126AFBAA100ACF934 /* TMBgImgGeneratorVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMBgImgGeneratorVC.m; sourceTree = "<group>"; };
+		7922CF0126C275FF00F9902E /* NSObject+THAutoDestructNoti.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+THAutoDestructNoti.h"; sourceTree = "<group>"; };
+		7922CF0226C275FF00F9902E /* NSObject+THAutoDestructNoti.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+THAutoDestructNoti.m"; sourceTree = "<group>"; };
 		795686F526BAEF4D00889B45 /* NSDecimalNumber+Calculate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+Calculate.h"; sourceTree = "<group>"; };
 		795686F626BAEF4D00889B45 /* NSDecimalNumber+Calculate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+Calculate.m"; sourceTree = "<group>"; };
+		799B1E5C26C186F700D34256 /* NSException+THTrackLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSException+THTrackLog.h"; sourceTree = "<group>"; };
+		799B1E5D26C186F700D34256 /* NSException+THTrackLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSException+THTrackLog.m"; sourceTree = "<group>"; };
 		799DC1AD26B7135B00AEEB42 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
 		799DC1AE26B7135B00AEEB42 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
 		79A8448426B9331B00D6C46F /* NSObject+Swizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzling.h"; sourceTree = "<group>"; };
 		79A8448526B9331B00D6C46F /* NSObject+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzling.m"; sourceTree = "<group>"; };
+		79BCD71726BD930500CCF4DB /* UIDevice+DiskInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+DiskInfo.h"; sourceTree = "<group>"; };
+		79BCD71826BD930500CCF4DB /* UIDevice+DiskInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+DiskInfo.m"; sourceTree = "<group>"; };
+		79BCD71A26BEE47D00CCF4DB /* NSArray+SafeAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+SafeAccess.h"; sourceTree = "<group>"; };
+		79BCD71B26BEE47D00CCF4DB /* NSArray+SafeAccess.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SafeAccess.m"; sourceTree = "<group>"; };
+		79BCD71D26C03C4C00CCF4DB /* NSString+THEmoji.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+THEmoji.h"; sourceTree = "<group>"; };
+		79BCD71E26C03C4C00CCF4DB /* NSString+THEmoji.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+THEmoji.m"; sourceTree = "<group>"; };
 		79C90BA926B5AA63006A1344 /* NSString+URLEncode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncode.h"; sourceTree = "<group>"; };
 		79C90BAA26B5AA63006A1344 /* NSString+URLEncode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncode.m"; sourceTree = "<group>"; };
 		79C90BAF26B6A7FC006A1344 /* NSString+QRCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+QRCode.h"; sourceTree = "<group>"; };
@@ -117,6 +132,16 @@
 				79A8448526B9331B00D6C46F /* NSObject+Swizzling.m */,
 				795686F526BAEF4D00889B45 /* NSDecimalNumber+Calculate.h */,
 				795686F626BAEF4D00889B45 /* NSDecimalNumber+Calculate.m */,
+				79BCD71726BD930500CCF4DB /* UIDevice+DiskInfo.h */,
+				79BCD71826BD930500CCF4DB /* UIDevice+DiskInfo.m */,
+				79BCD71A26BEE47D00CCF4DB /* NSArray+SafeAccess.h */,
+				79BCD71B26BEE47D00CCF4DB /* NSArray+SafeAccess.m */,
+				79BCD71D26C03C4C00CCF4DB /* NSString+THEmoji.h */,
+				79BCD71E26C03C4C00CCF4DB /* NSString+THEmoji.m */,
+				799B1E5C26C186F700D34256 /* NSException+THTrackLog.h */,
+				799B1E5D26C186F700D34256 /* NSException+THTrackLog.m */,
+				7922CF0126C275FF00F9902E /* NSObject+THAutoDestructNoti.h */,
+				7922CF0226C275FF00F9902E /* NSObject+THAutoDestructNoti.m */,
 			);
 			path = THKit;
 			sourceTree = "<group>";
@@ -191,10 +216,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				791218C226AFBAA100ACF934 /* TMBgImgGeneratorVC.m in Sources */,
+				799B1E5E26C186F700D34256 /* NSException+THTrackLog.m in Sources */,
 				791218A826AF115400ACF934 /* ViewController.m in Sources */,
+				79BCD71926BD930500CCF4DB /* UIDevice+DiskInfo.m in Sources */,
 				791218BF26AF142A00ACF934 /* UIColor+Hex.m in Sources */,
 				795686F726BAEF4D00889B45 /* NSDecimalNumber+Calculate.m in Sources */,
 				79C90BAB26B5AA63006A1344 /* NSString+URLEncode.m in Sources */,
+				7922CF0326C275FF00F9902E /* NSObject+THAutoDestructNoti.m in Sources */,
+				79BCD71F26C03C4C00CCF4DB /* NSString+THEmoji.m in Sources */,
 				791218BC26AF136400ACF934 /* UIImage+color.m in Sources */,
 				79CAC19926B1B34900A0EE71 /* NSString+Predicate.m in Sources */,
 				79C90BB126B6A7FC006A1344 /* NSString+QRCode.m in Sources */,
@@ -202,6 +231,7 @@
 				799DC1AF26B7135B00AEEB42 /* UIViewController+BackButtonHandler.m in Sources */,
 				791218B326AF115500ACF934 /* main.m in Sources */,
 				79A8448626B9331B00D6C46F /* NSObject+Swizzling.m in Sources */,
+				79BCD71C26BEE47D00CCF4DB /* NSArray+SafeAccess.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

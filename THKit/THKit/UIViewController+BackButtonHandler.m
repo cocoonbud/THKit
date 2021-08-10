@@ -9,7 +9,7 @@
 #import "NSObject+Swizzling.h"
 #import <objc/runtime.h>
 
-static void * const interactivePopGestureDelegate = "interactivePopGestureDelegate";
+static void * const kInteractivePopGestureDelegate = "interactivePopGestureDelegate";
 
 @implementation UINavigationController (navigationPopBack)
 
@@ -22,7 +22,7 @@ static void * const interactivePopGestureDelegate = "interactivePopGestureDelega
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    objc_setAssociatedObject(self, interactivePopGestureDelegate, self.interactivePopGestureRecognizer.delegate, OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, kInteractivePopGestureDelegate, self.interactivePopGestureRecognizer.delegate, OBJC_ASSOCIATION_ASSIGN);
     self.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
 }
 
@@ -61,7 +61,7 @@ static void * const interactivePopGestureDelegate = "interactivePopGestureDelega
             return [vc navigationShouldPopOnBackButton];
         }
             
-        id<UIGestureRecognizerDelegate> originDelegate = objc_getAssociatedObject(self, interactivePopGestureDelegate);
+        id<UIGestureRecognizerDelegate> originDelegate = objc_getAssociatedObject(self, kInteractivePopGestureDelegate);
         return [originDelegate gestureRecognizerShouldBegin:gestureRecognizer];
     }
     return YES;

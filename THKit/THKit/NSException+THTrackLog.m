@@ -21,16 +21,16 @@
         stack[i] = (void *)[add[i] longValue];
     }
     
-    char **strings = backtrace_symbols(stack, count);
+    char **str = backtrace_symbols(stack, count);
     
     NSMutableArray *ret = [NSMutableArray arrayWithCapacity:count];
     
     for (int i = 0; i < count; ++i) {
-        [ret addObject:@(strings[i])];
+        [ret addObject:@(str[i])];
     }
     
     free(stack);
-    free(strings);
+    free(str);
     
     return ret;
 }
