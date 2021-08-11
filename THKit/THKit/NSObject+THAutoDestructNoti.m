@@ -8,7 +8,7 @@
 #import "NSObject+THAutoDestructNoti.h"
 #import <objc/runtime.h>
 
-static void *kTHAutoDestructNotiKey = "kTHAutoDestructNoti";
+static const void *kTHAutoDestructNotiKey = "kTHAutoDestructNoti";
 
 @implementation THDestructNoti
 
@@ -19,7 +19,9 @@ static void *kTHAutoDestructNotiKey = "kTHAutoDestructNoti";
 - (void)dealloc {
     THDestructNotiBlock block = [self block];
     
-    if (!block) block(self);
+    if (block) {
+        block(self);
+    }
     
     _block = nil;
     _userInfo = nil;
@@ -28,9 +30,12 @@ static void *kTHAutoDestructNotiKey = "kTHAutoDestructNoti";
 
 @end
 
+
+
+
 @implementation NSObject (THAutoDestructNoti)
 
-- (NSMutableDictionary *)thDestructNotiDictionary {
+- (NSMutableDictionary *)thDestructNotiDic {
     NSMutableDictionary *dict = (NSMutableDictionary *)objc_getAssociatedObject(self, kTHAutoDestructNotiKey);
     
     if (!dict) {
@@ -52,11 +57,11 @@ static void *kTHAutoDestructNotiKey = "kTHAutoDestructNoti";
     noti.name = name;
     noti.block = block;
     noti.userInfo = userInfo;
-    [self.thDestructNotiDictionary setObject:noti forKey:name];
+    [self.thDestructNotiDic setObject:noti forKey:name];
 }
 
 - (void)th_destructNotiRemoveWithName:(NSString *)name {
-    NSMutableDictionary *dict = self.thDestructNotiDictionary;
+    NSMutableDictionary *dict = self.thDestructNotiDic;
     
     THDestructNoti *noti = [dict objectForKey:name];
     
