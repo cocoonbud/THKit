@@ -25,7 +25,7 @@ typedef void(^THDestructNotiBlock)(THDestructNoti *notify);
 
 @interface NSObject (THAutoDestructNoti)
 
-- (NSMutableDictionary *)thDestructNotiDictionary;
+- (NSMutableDictionary *)thDestructNotiDic;
 
 - (void)th_destructNotiSetName:(NSString *)name block:(THDestructNotiBlock)block;
 

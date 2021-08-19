@@ -16,7 +16,8 @@ static void * const kInteractivePopGestureDelegate = "interactivePopGestureDeleg
 + (void)load{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [self methodSwizzlingWithOriginalSelector:@selector(navigationBar:shouldPopItem:) bySwizzlingedSelector:@selector(th_navigationBar:shouldPopItem:)];
+        [self methodSwizzlingWithOriginalSelector:@selector(navigationBar:shouldPopItem:)
+                            bySwizzlingedSelector:@selector(p_navigationBar:shouldPopItem:)];
     });
 }
 
@@ -26,13 +27,13 @@ static void * const kInteractivePopGestureDelegate = "interactivePopGestureDeleg
     self.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
 }
 
-- (BOOL)th_navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item {
+- (BOOL)p_navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item {
     UIViewController *vc = [self topViewController];
     
     if (item != vc.navigationItem) { return YES; }
     if ([vc respondsToSelector:@selector(navigationShouldPopOnBackButton)]) {
         if ([vc navigationShouldPopOnBackButton]) {
-            return [self th_navigationBar:navigationBar shouldPopItem:item];
+            return [self p_navigationBar:navigationBar shouldPopItem:item];
         } else{
             for (UIView *subview in [navigationBar subviews]) {
                 if (subview.alpha > 0 && subview.alpha < 1.f) {
@@ -44,7 +45,7 @@ static void * const kInteractivePopGestureDelegate = "interactivePopGestureDeleg
             return NO;
         }
     } else{
-        return [self th_navigationBar:navigationBar shouldPopItem:item];
+        return [self p_navigationBar:navigationBar shouldPopItem:item];
     }
     return NO;
 }
