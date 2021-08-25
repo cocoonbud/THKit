@@ -7,9 +7,12 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface UIImage (color)
+
+/// creat image with color and size
+/// @param color color
+/// @param size size
++ (UIImage *)createImageWithColor:(UIColor *)color size:(CGSize)size;
 
 /// background image generator
 /// @param width image width
@@ -63,5 +66,3 @@ NS_ASSUME_NONNULL_BEGIN
      gradientBorderColorsLocations:(CGFloat *)gradientBorderLocations;
 
 @end
-
-NS_ASSUME_NONNULL_END

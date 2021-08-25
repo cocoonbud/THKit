@@ -9,6 +9,19 @@
 
 @implementation UIImage (color)
 
++ (UIImage *)createImageWithColor:(UIColor *)color size:(CGSize)size {
+    CGRect rect = CGRectMake(0.0f, 0.0f, size.width, size.height);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    
+    UIImage *resImg = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    return resImg;
+}
+
 /// background image generator
 /// @param width image width
 /// @param height image height
