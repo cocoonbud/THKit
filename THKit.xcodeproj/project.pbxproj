@@ -19,6 +19,7 @@
 		7922CF0326C275FF00F9902E /* NSObject+THAutoDestructNoti.m in Sources */ = {isa = PBXBuildFile; fileRef = 7922CF0226C275FF00F9902E /* NSObject+THAutoDestructNoti.m */; };
 		795686F726BAEF4D00889B45 /* NSDecimalNumber+Calculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 795686F626BAEF4D00889B45 /* NSDecimalNumber+Calculate.m */; };
 		797D490828AB462B0091ED79 /* THTimerProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 797D490728AB462B0091ED79 /* THTimerProxy.m */; };
+		797D490B28AB7AAD0091ED79 /* THGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 797D490A28AB7AAD0091ED79 /* THGCDTimer.m */; };
 		799B1E5E26C186F700D34256 /* NSException+THTrackLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 799B1E5D26C186F700D34256 /* NSException+THTrackLog.m */; };
 		799DC1AF26B7135B00AEEB42 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 799DC1AE26B7135B00AEEB42 /* UIViewController+BackButtonHandler.m */; };
 		799E755426CE322B00F64550 /* NSObject+PrintPrettyLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 799E755326CE322B00F64550 /* NSObject+PrintPrettyLog.m */; };
@@ -55,6 +56,8 @@
 		795686F626BAEF4D00889B45 /* NSDecimalNumber+Calculate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+Calculate.m"; sourceTree = "<group>"; };
 		797D490628AB462B0091ED79 /* THTimerProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THTimerProxy.h; sourceTree = "<group>"; };
 		797D490728AB462B0091ED79 /* THTimerProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THTimerProxy.m; sourceTree = "<group>"; };
+		797D490928AB7AAD0091ED79 /* THGCDTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THGCDTimer.h; sourceTree = "<group>"; };
+		797D490A28AB7AAD0091ED79 /* THGCDTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THGCDTimer.m; sourceTree = "<group>"; };
 		799B1E5C26C186F700D34256 /* NSException+THTrackLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSException+THTrackLog.h"; sourceTree = "<group>"; };
 		799B1E5D26C186F700D34256 /* NSException+THTrackLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSException+THTrackLog.m"; sourceTree = "<group>"; };
 		799DC1AD26B7135B00AEEB42 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
@@ -173,6 +176,8 @@
 			children = (
 				797D490628AB462B0091ED79 /* THTimerProxy.h */,
 				797D490728AB462B0091ED79 /* THTimerProxy.m */,
+				797D490928AB7AAD0091ED79 /* THGCDTimer.h */,
+				797D490A28AB7AAD0091ED79 /* THGCDTimer.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 			files = (
 				7919D73726D65A9300D04C12 /* UIButton+Relayout.m in Sources */,
 				791218C226AFBAA100ACF934 /* TMBgImgGeneratorVC.m in Sources */,
+				797D490B28AB7AAD0091ED79 /* THGCDTimer.m in Sources */,
 				799B1E5E26C186F700D34256 /* NSException+THTrackLog.m in Sources */,
 				799E755426CE322B00F64550 /* NSObject+PrintPrettyLog.m in Sources */,
 				791218A826AF115400ACF934 /* ViewController.m in Sources */,
