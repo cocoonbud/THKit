@@ -18,6 +18,7 @@
 		7919D73726D65A9300D04C12 /* UIButton+Relayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7919D73626D65A9300D04C12 /* UIButton+Relayout.m */; };
 		7922CF0326C275FF00F9902E /* NSObject+THAutoDestructNoti.m in Sources */ = {isa = PBXBuildFile; fileRef = 7922CF0226C275FF00F9902E /* NSObject+THAutoDestructNoti.m */; };
 		795686F726BAEF4D00889B45 /* NSDecimalNumber+Calculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 795686F626BAEF4D00889B45 /* NSDecimalNumber+Calculate.m */; };
+		797D490828AB462B0091ED79 /* THTimerProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 797D490728AB462B0091ED79 /* THTimerProxy.m */; };
 		799B1E5E26C186F700D34256 /* NSException+THTrackLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 799B1E5D26C186F700D34256 /* NSException+THTrackLog.m */; };
 		799DC1AF26B7135B00AEEB42 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 799DC1AE26B7135B00AEEB42 /* UIViewController+BackButtonHandler.m */; };
 		799E755426CE322B00F64550 /* NSObject+PrintPrettyLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 799E755326CE322B00F64550 /* NSObject+PrintPrettyLog.m */; };
@@ -52,6 +53,8 @@
 		7922CF0226C275FF00F9902E /* NSObject+THAutoDestructNoti.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+THAutoDestructNoti.m"; sourceTree = "<group>"; };
 		795686F526BAEF4D00889B45 /* NSDecimalNumber+Calculate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+Calculate.h"; sourceTree = "<group>"; };
 		795686F626BAEF4D00889B45 /* NSDecimalNumber+Calculate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+Calculate.m"; sourceTree = "<group>"; };
+		797D490628AB462B0091ED79 /* THTimerProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THTimerProxy.h; sourceTree = "<group>"; };
+		797D490728AB462B0091ED79 /* THTimerProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THTimerProxy.m; sourceTree = "<group>"; };
 		799B1E5C26C186F700D34256 /* NSException+THTrackLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSException+THTrackLog.h"; sourceTree = "<group>"; };
 		799B1E5D26C186F700D34256 /* NSException+THTrackLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSException+THTrackLog.m"; sourceTree = "<group>"; };
 		799DC1AD26B7135B00AEEB42 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
@@ -122,6 +125,15 @@
 		791218B926AF134900ACF934 /* THKit */ = {
 			isa = PBXGroup;
 			children = (
+				797D490528AB46040091ED79 /* Utilities */,
+				797D490328AB45DE0091ED79 /* Category */,
+			);
+			path = THKit;
+			sourceTree = "<group>";
+		};
+		797D490328AB45DE0091ED79 /* Category */ = {
+			isa = PBXGroup;
+			children = (
 				791218BD26AF142A00ACF934 /* UIColor+Hex.h */,
 				791218BE26AF142A00ACF934 /* UIColor+Hex.m */,
 				791218BA26AF136400ACF934 /* UIImage+color.h */,
@@ -153,7 +165,16 @@
 				7919D73526D65A9300D04C12 /* UIButton+Relayout.h */,
 				7919D73626D65A9300D04C12 /* UIButton+Relayout.m */,
 			);
-			path = THKit;
+			path = Category;
+			sourceTree = "<group>";
+		};
+		797D490528AB46040091ED79 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				797D490628AB462B0091ED79 /* THTimerProxy.h */,
+				797D490728AB462B0091ED79 /* THTimerProxy.m */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +262,7 @@
 				79C90BB126B6A7FC006A1344 /* NSString+QRCode.m in Sources */,
 				791218A226AF115400ACF934 /* AppDelegate.m in Sources */,
 				799DC1AF26B7135B00AEEB42 /* UIViewController+BackButtonHandler.m in Sources */,
+				797D490828AB462B0091ED79 /* THTimerProxy.m in Sources */,
 				791218B326AF115500ACF934 /* main.m in Sources */,
 				79A8448626B9331B00D6C46F /* NSObject+Swizzling.m in Sources */,
 				79BCD71C26BEE47D00CCF4DB /* NSArray+SafeAccess.m in Sources */,
