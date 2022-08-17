@@ -12,7 +12,7 @@
 
 @implementation NSObject (PrintPrettyLog)
 
-- (NSString *)trans2JsonSt {
+- (NSString *)trans2JsonStr {
     if (![NSJSONSerialization isValidJSONObject:self]) return nil;
     
     NSJSONWritingOptions jsonOp = NSJSONWritingPrettyPrinted;
@@ -34,7 +34,6 @@
 
 
 
-
 #pragma mark - NSArray
 @implementation NSArray (PrintPrettyLog)
 
@@ -51,7 +50,7 @@
 }
 
 - (NSString *)p_descriptionWithLocale:(id)locale{
-    NSString *result = [self trans2JsonSt];
+    NSString *result = [self trans2JsonStr];
     
     if (result.length < 1) {
         result = [self p_descriptionWithLocale:locale];
@@ -61,7 +60,7 @@
 }
 
 - (NSString *)p_debugDescription{
-    NSString *result = [self trans2JsonSt];
+    NSString *result = [self trans2JsonStr];
     
     if (result.length < 1) {
         return [self p_debugDescription];
@@ -70,7 +69,7 @@
 }
 
 - (NSString *)p_descriptionWithLocale:(id)locale indent:(NSUInteger)level {
-    NSString *result = [self trans2JsonSt];
+    NSString *result = [self trans2JsonStr];
     
     if (result.length < 1) {
         result = [self p_descriptionWithLocale:locale indent:level];
@@ -100,7 +99,7 @@
 }
 
 - (NSString *)p_descriptionWithLocale:(id)locale{
-    NSString *result = [self trans2JsonSt];
+    NSString *result = [self trans2JsonStr];
     
     if (result.length < 1) {
         result = [self p_descriptionWithLocale:locale];
@@ -110,7 +109,7 @@
 }
 
 - (NSString *)p_debugDescription{
-    NSString *result = [self trans2JsonSt];
+    NSString *result = [self trans2JsonStr];
     
     if (result.length < 1) {
         return [self p_debugDescription];
@@ -119,7 +118,7 @@
 }
 
 - (NSString *)p_descriptionWithLocale:(id)locale indent:(NSUInteger)level {
-    NSString *result = [self trans2JsonSt];
+    NSString *result = [self trans2JsonStr];
     
     if (result.length < 1) {
         result = [self p_descriptionWithLocale:locale indent:level];
